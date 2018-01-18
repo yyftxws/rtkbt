@@ -1,0 +1,58 @@
+LOCAL_PATH := $(call my-dir)
+
+include $(CLEAR_VARS)
+
+LOCAL_SRC_FILES := \
+        src/bt_hci_bdroid.c \
+        src/lpm.c \
+        src/bt_hw.c \
+        src/btsnoop.c \
+        src/utils.c
+ifeq ($(BOARD_HAVE_BLUETOOTH_RTK),true)
+
+LOCAL_CFLAGS := -DHCI_USE_RTK_H5
+
+LOCAL_SRC_FILES += \
+       src/hci_h4.c \
+       src/hci_h5.c \
+       src/userial.c \
+       src/bt_skbuff.c
+
+else
+LOCAL_SRC_FILES += \
+        src/hci_h4.c \
+        src/userial.c
+endif
+
+
+ifeq ($(BOARD_HAVE_BLUETOOTH_RTK),true)
+LOCAL_CFLAGS += -DBLUETOOTH_RTK
+LOCAL_SRC_FILES += \
+        src/bt_list.c
+endif
+
+ifeq ($(BOARD_HAVE_BLUETOOTH_RTK_COEX),true)
+LOCAL_CFLAGS += -DBLUETOOTH_RTK_COEX
+LOCAL_SRC_FILES += \
+        src/rtk_parse.c
+
+LOCAL_C_INCLUDES += \
+        $(LOCAL_PATH)/../stack/include \
+        $(LOCAL_PATH)/../gki/ulinux
+endif
+
+LOCAL_C_INCLUDES += \
+        $(LOCAL_PATH)/include \
+        $(LOCAL_PATH)/../utils/include
+
+LOCAL_SHARED_LIBRARIES := \
+        libcutils \
+        liblog \
+        libdl \
+        libbt-utils
+
+LOCAL_MODULE := libbt-hci
+LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_CLASS := SHARED_LIBRARIES
+
+include $(BUILD_SHARED_LIBRARY)
