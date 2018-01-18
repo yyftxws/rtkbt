@@ -4,10 +4,10 @@ LOCAL_PATH:= $(call my-dir)
 
 include $(CLEAR_VARS)
 
-ifeq ($(BOARD_HAVE_BLUETOOTH_BCM),true)
-LOCAL_CFLAGS += \
-	-DBOARD_HAVE_BLUETOOTH_BCM
-endif
+#ifeq ($(BOARD_HAVE_BLUETOOTH_BCM),true)
+#LOCAL_CFLAGS += \
+#	-DBOARD_HAVE_BLUETOOTH_BCM
+#endif
 LOCAL_CFLAGS += -DBUILDCFG $(bdroid_CFLAGS)
 
 LOCAL_PRELINK_MODULE:=false
@@ -79,7 +79,7 @@ LOCAL_SRC_FILES:= \
     ./jv/bta_jv_main.c \
     ./jv/bta_jv_api.c
 
-LOCAL_MODULE := libbt-brcm_bta
+LOCAL_MODULE := libbt-brcm_bta-rtk
 LOCAL_MODULE_CLASS := STATIC_LIBRARIES
 LOCAL_MODULE_TAGS := optional
 LOCAL_SHARED_LIBRARIES := libcutils libc
@@ -96,7 +96,7 @@ LOCAL_C_INCLUDES+= . \
                    $(LOCAL_PATH)/../stack/btm \
                    $(LOCAL_PATH)/../hcis \
                    $(LOCAL_PATH)/../hcis/patchram \
-                   $(LOCAL_PATH)/../udrv/include \
+                   $(LOCAL_PATH)/../udrv_rtk/include \
                    $(LOCAL_PATH)/../brcm/include \
                    $(bdroid_C_INCLUDES)
 

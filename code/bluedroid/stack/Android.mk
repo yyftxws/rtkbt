@@ -22,7 +22,7 @@ LOCAL_C_INCLUDES:= . \
                    $(LOCAL_PATH)/../include \
                    $(LOCAL_PATH)/../gki/common \
                    $(LOCAL_PATH)/../gki/ulinux \
-                   $(LOCAL_PATH)/../udrv/include \
+                   $(LOCAL_PATH)/../udrv_rtk/include \
                    $(LOCAL_PATH)/../rpc/include \
                    $(LOCAL_PATH)/../hcis \
                    $(LOCAL_PATH)/../ctrlr/include \
@@ -42,10 +42,10 @@ ifeq ($(BOARD_HAVE_BLUETOOTH_RTK_COEX),true)
 LOCAL_C_INCLUDES += . \
     $(LOCAL_PATH)/../hci/include
 endif
-ifeq ($(BOARD_HAVE_BLUETOOTH_BCM),true)
-LOCAL_CFLAGS += \
-	-DBOARD_HAVE_BLUETOOTH_BCM
-endif
+#ifeq ($(BOARD_HAVE_BLUETOOTH_BCM),true)
+#LOCAL_CFLAGS += \
+#	-DBOARD_HAVE_BLUETOOTH_BCM
+#endif
 
 LOCAL_PRELINK_MODULE:=false
 LOCAL_SRC_FILES:= \
@@ -155,7 +155,7 @@ LOCAL_SRC_FILES:= \
     ./gap/gap_conn.c \
     ./gap/gap_utils.c
 
-LOCAL_MODULE := libbt-brcm_stack
+LOCAL_MODULE := libbt-brcm_stack-rtk
 LOCAL_MODULE_TAGS := optional
 LOCAL_MODULE_CLASS := STATIC_LIBRARIES
 LOCAL_SHARED_LIBRARIES := libcutils libc

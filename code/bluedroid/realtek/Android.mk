@@ -18,12 +18,12 @@ rtk_local_C_INCLUDES := \
         $(LOCAL_PATH)/../hcis \
         $(LOCAL_PATH)/../hcis/include \
         $(LOCAL_PATH)/../hcis/patchram \
-        $(LOCAL_PATH)/../udrv/include \
-        $(LOCAL_PATH)/../btif/include \
-        $(LOCAL_PATH)/../btif/co \
+        $(LOCAL_PATH)/../udrv_rtk/include \
+        $(LOCAL_PATH)/../btif_rtk/include \
+        $(LOCAL_PATH)/../btif_rtk/co \
         $(LOCAL_PATH)/../hci/include\
         $(LOCAL_PATH)/../brcm/include \
-        $(LOCAL_PATH)/../embdrv/sbc/encoder/include \
+        $(LOCAL_PATH)/../embdrv_rtk/sbc/encoder/include \
         $(LOCAL_PATH)/../utils/include \
         external/tinyxml2 \
         $(bdroid_C_INCLUDES)

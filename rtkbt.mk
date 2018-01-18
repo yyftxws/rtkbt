@@ -4,6 +4,7 @@
 BOARD_HAVE_BLUETOOTH := true
 BOARD_HAVE_BLUETOOTH_RTK := true
 BOARD_HAVE_BLUETOOTH_RTK_COEX := true
+BLUETOOTH_HCI_USE_RTK_H5 := true
 
 #BOARD_HAVE_BLUETOOTH_RTK_ADDON := bee1 rtkbtAutoPairService rtkbtAutoPairUIDemo 
 #BOARD_HAVE_BLUETOOTH_RTK_ADDON := bee1 rtkbtAutoPairService rtkbtAutoPairUIDemo vr_bee_hidraw_daemon
@@ -37,4 +38,5 @@ PRODUCT_COPY_FILES += \
 
 PRODUCT_PACKAGES += \
 	Bluetooth \
-	audio.a2dp.default
+	audio.a2dp.rtk \
+	bluetooth.rtk

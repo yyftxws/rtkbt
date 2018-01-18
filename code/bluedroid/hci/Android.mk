@@ -49,9 +49,9 @@ LOCAL_SHARED_LIBRARIES := \
         libcutils \
         liblog \
         libdl \
-        libbt-utils
+        libbt-utils-rtk
 
-LOCAL_MODULE := libbt-hci
+LOCAL_MODULE := libbt-hci-rtk
 LOCAL_MODULE_TAGS := optional
 LOCAL_MODULE_CLASS := SHARED_LIBRARIES
 

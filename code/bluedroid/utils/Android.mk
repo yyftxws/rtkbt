@@ -12,7 +12,7 @@ LOCAL_PRELINK_MODULE:=false
 LOCAL_SRC_FILES:= \
     ./src/bt_utils.c
 
-LOCAL_MODULE := libbt-utils
+LOCAL_MODULE := libbt-utils-rtk
 LOCAL_MODULE_TAGS := optional
 LOCAL_SHARED_LIBRARIES := libcutils liblog libc
 LOCAL_MODULE_CLASS := SHARED_LIBRARIES

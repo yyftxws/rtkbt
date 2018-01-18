@@ -25,7 +25,7 @@ LOCAL_C_INCLUDES :=
 
 LOCAL_MODULE_TAGS := eng
 
-LOCAL_MODULE:= bdt
+LOCAL_MODULE:= bdt-rtk
 
 LOCAL_LDLIBS += -lpthread -ldl -llog -lreadline
 LIBS_c += -lreadline

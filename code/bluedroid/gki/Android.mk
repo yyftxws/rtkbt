@@ -13,10 +13,10 @@ LOCAL_C_INCLUDES:= $(LOCAL_PATH)/common \
 
 LOCAL_CFLAGS += -Werror -Wno-error=unused-parameter $(bdroid_CFLAGS)
 
-ifeq ($(BOARD_HAVE_BLUETOOTH_BCM),true)
-LOCAL_CFLAGS += \
-	-DBOARD_HAVE_BLUETOOTH_BCM
-endif
+#ifeq ($(BOARD_HAVE_BLUETOOTH_BCM),true)
+#LOCAL_CFLAGS += \
+#	-DBOARD_HAVE_BLUETOOTH_BCM
+#endif
 
 LOCAL_PRELINK_MODULE:=false
 LOCAL_SRC_FILES:= \
@@ -25,7 +25,8 @@ LOCAL_SRC_FILES:= \
     ./common/gki_time.c \
     ./common/gki_buffer.c
 
-LOCAL_MODULE := libbt-brcm_gki
+LOCAL_MODULE := libbt-brcm_gki-rtk
+
 LOCAL_MODULE_TAGS := optional
 LOCAL_SHARED_LIBRARIES := libcutils libc
 LOCAL_MODULE_CLASS := STATIC_LIBRARIES
