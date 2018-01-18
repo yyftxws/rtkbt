@@ -220,6 +220,8 @@ int bt_wake_up_host_mode_set(uint8_t mode)
     if (fd >= 0)
         close(fd);
 
+    hw_lpm_set_wake_state(mode);
+
     return ret;
 }
 

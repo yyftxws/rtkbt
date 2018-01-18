@@ -25,8 +25,8 @@ PRODUCT_COPY_FILES += \
 	$(LOCAL_PATH)/Firmware/BT/rtl8723cs_xx_fw:system/etc/firmware/rtl8723cs_xx_fw \
 	$(LOCAL_PATH)/Firmware/BT/rtl8723d_config:system/etc/firmware/rtl8723d_config \
 	$(LOCAL_PATH)/Firmware/BT/rtl8723d_fw:system/etc/firmware/rtl8723d_fw \
-	$(LOCAL_PATH)/Firmware/BT/rtl8723ds_config:system/etc/firmware/rtl8723ds_config \
-	$(LOCAL_PATH)/Firmware/BT/rtl8723ds_fw:system/etc/firmware/rtl8723ds_fw \
+	$(LOCAL_PATH)/Firmware/BT/rtl8723ds_config.bin:system/etc/firmware/rtl8723ds_config \
+	$(LOCAL_PATH)/Firmware/BT/rtl8723ds_fw.bin:system/etc/firmware/rtl8723ds_fw \
 	$(LOCAL_PATH)/Firmware/BT/rtl8761a_config:system/etc/firmware/rtl8761a_config \
 	$(LOCAL_PATH)/Firmware/BT/rtl8761at_config:system/etc/firmware/rtl8761at_config \
 	$(LOCAL_PATH)/Firmware/BT/rtl8761at_fw:system/etc/firmware/rtl8761at_fw \

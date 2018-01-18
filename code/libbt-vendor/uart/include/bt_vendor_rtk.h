@@ -188,7 +188,7 @@
     LPM & BT_WAKE control through PROC nodes
 */
 #ifndef BT_WAKE_VIA_PROC
-#define BT_WAKE_VIA_PROC       FALSE
+#define BT_WAKE_VIA_PROC       TRUE
 #endif
 
 /* HW_END_WITH_HCI_RESET

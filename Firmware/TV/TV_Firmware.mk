@@ -8,8 +8,8 @@ PRODUCT_COPY_FILES += \
 	$(LOCAL_PATH)/Firmware/TV/rtl8723bu_config:system/etc/firmware/rtl8723bu_config \
 	$(LOCAL_PATH)/Firmware/TV/rtl8723d_config:system/etc/firmware/rtl8723d_config \
 	$(LOCAL_PATH)/Firmware/TV/rtl8723d_fw:system/etc/firmware/rtl8723d_fw \
-	$(LOCAL_PATH)/Firmware/TV/rtl8723ds_config:system/etc/firmware/rtl8723ds_config \
-	$(LOCAL_PATH)/Firmware/TV/rtl8723ds_fw:system/etc/firmware/rtl8723ds_fw \
+	$(LOCAL_PATH)/Firmware/TV/rtl8723ds_config.bin:system/etc/firmware/rtl8723ds_config \
+	$(LOCAL_PATH)/Firmware/TV/rtl8723ds_fw.bin:system/etc/firmware/rtl8723ds_fw \
 	$(LOCAL_PATH)/Firmware/TV/rtl8761a_config:system/etc/firmware/rtl8761a_config \
 	$(LOCAL_PATH)/Firmware/TV/rtl8761a_fw:system/etc/firmware/rtl8761a_fw \
 	$(LOCAL_PATH)/Firmware/TV/rtl8761at_config:system/etc/firmware/rtl8761at_config \
