@@ -421,13 +421,41 @@ int config_hci_snoop_log(uint8_t enable)
 
     return btif_config_hci_snoop_log(enable);
 }
+static int enable_radio( void )
+{
+    ALOGI("enable");
 
+    /* sanity check */
+    if (interface_ready() == FALSE)
+        return BT_STATUS_NOT_READY;
+
+#ifdef BLUEDROID_RADIO
+    return btif_enable_radio();
+#else
+    return BT_STATUS_FAIL;
+#endif
+}
+
+static int disable_radio(void)
+{
+    /* sanity check */
+    if (interface_ready() == FALSE)
+        return BT_STATUS_NOT_READY;
+
+#ifdef BLUEDROID_RADIO
+    return btif_disable_radio();
+#else
+    return BT_STATUS_FAIL;
+#endif
+}
 #ifdef BLUETOOTH_RTK
 static const bt_interface_t bluetoothInterface = {
     .size = sizeof(bluetoothInterface),
     .init = init,
     .enable = enable,
     .disable = disable,
+    .enableRadio = enable_radio,
+    .disableRadio = disable_radio,
     .cleanup = cleanup,
     .get_adapter_properties = get_adapter_properties,
     .get_adapter_property = get_adapter_property,
@@ -461,6 +489,8 @@ static const bt_interface_t bluetoothInterface = {
     init,
     enable,
     disable,
+    enable_radio,
+    disable_radio,
     cleanup,
     get_adapter_properties,
     get_adapter_property,

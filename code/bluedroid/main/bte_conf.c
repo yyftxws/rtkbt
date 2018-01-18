@@ -63,10 +63,10 @@ int device_class_cfg(char *p_conf_name, char *p_conf_value);
 int logging_cfg_onoff(char *p_conf_name, char *p_conf_value);
 int logging_set_filepath(char *p_conf_name, char *p_conf_value);
 int trace_cfg_onoff(char *p_conf_name, char *p_conf_value);
-#ifdef BLUETOOTH_RTK_COEX
-int rtk_coex_log_onoff(char *p_conf_name, char *p_conf_value);
 void bte_load_rtkbt_conf(const char *p_path);
 int logging_set_rtkbt_filepath(char *p_conf_name, char *p_conf_value);
+#ifdef BLUETOOTH_RTK_COEX
+int rtk_coex_log_onoff(char *p_conf_name, char *p_conf_value);
 
 #endif
 
